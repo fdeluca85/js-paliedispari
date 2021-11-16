@@ -34,7 +34,6 @@ const somma = userNumber + pcNumber
 console.log('la somma è '+ somma);
 
 
-// controllo scela pari e dispari
 // controllo scelta pari e dispari
 if(choose == "pari" && isEven(somma))
 {
