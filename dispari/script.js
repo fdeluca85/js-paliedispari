@@ -3,11 +3,11 @@
 
 // Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 
-// funzione per il numero random
+// numero pc
 function getRandomInt(num) {
     return Math.floor(Math.random() * num) + 1;
 }
-// funzione per pari o dispari
+// controllo numero pari
 function isEven(num) {
     return (num % 2 == 0);
 }
@@ -20,7 +20,7 @@ console.log("Hai scelto " + choose);
 // numero del giocatore
 let userNumber = parseInt(prompt("Inserisci un numero tra 1 e 5: "));
 while (userNumber > 5 || userNumber < 1)
-{
+{ //se il giocatore inserisce un numero fuori range
     userNumber = parseInt(prompt("Devi inserire un numero tra 1 e 5. Riprova"))
 }
 console.log("Il tuo numero è " + userNumber);
@@ -31,9 +31,23 @@ console.log("il numero del PC è " + pcNumber);
 
 // somma dei numeri
 const somma = userNumber + pcNumber
-console.log('la somma e '+ somma);
+console.log('la somma è '+ somma);
 
-if(choose == "pari" isEven(somma))
+
+// controllo scelta pari e dispari
+if(choose == "pari" && isEven(somma))
 {
-    console.log(pari);
+    console.log("è pari hai vinto")
+}
+else if(choose == "pari" || isEven(somma))
+{
+    console.log("è dispari hai perso")
+}
+else if(choose == "dispari" || isEven(somma))
+{
+    console.log("è dispari hai vinto")
+}
+else if (choose == "dispari" && isEven(somma))
+{
+    console.log("è pari hai perso")
 }
