@@ -4,9 +4,9 @@
 // Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 
 // numero pc
-// function getRandomInt(num) {
-//     return Math.floor(Math.random() * num) + 1;
-// }
+function getRandomInt(num) {
+    return Math.floor(Math.random() * num) + 1;
+}
 // controllo numero pari
 function isEven(num) {
     return (num % 2 == 0);
@@ -26,13 +26,15 @@ while (userNumber > 5 || userNumber < 1)
 console.log("Il tuo numero è " + userNumber);
 
 // numero del pc
-const pcNumber = 2;
+const pcNumber = getRandomInt(5);
+console.log("il numero del PC è " + pcNumber);
 
 // somma dei numeri
 const somma = userNumber + pcNumber
 console.log('la somma è '+ somma);
 
 
+// controllo scela pari e dispari
 // controllo scelta pari e dispari
 if(choose == "pari" && isEven(somma))
 {
